@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Torneo de Smite en Discord</title>
+  <title>Torneo de Smite en Ragnarok</title>
   <!-- Importar Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Importar Google Fonts -->
@@ -17,13 +17,13 @@
       color: #fff;
     }
     header {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 20px;
       text-align: center;
       border-bottom: 4px solid #007bff;
     }
     .container {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.85);
       border-radius: 10px;
       padding: 20px;
       margin-top: 20px;
@@ -42,31 +42,16 @@
       border-radius: 5px;
       margin-bottom: 10px;
     }
-    .timeline {
-      border-left: 4px solid #007bff;
-      margin-top: 20px;
-      padding-left: 20px;
-    }
-    .timeline-item {
-      margin-bottom: 20px;
-      padding: 10px 15px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      position: relative;
-    }
-    .timeline-item:before {
-      content: "";
-      position: absolute;
-      left: -9px;
-      top: 15px;
-      width: 15px;
-      height: 15px;
-      background: #007bff;
-      border-radius: 50%;
-      z-index: 1;
+    .info-box {
+      border: 2px solid #007bff;
+      padding: 10px;
+      margin-bottom: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ffcc00;
+      border-radius: 5px;
     }
     footer {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.8);
       color: #ffcc00;
       text-align: center;
       padding: 10px 0;
@@ -89,41 +74,66 @@
   </header>
 
   <div class="container">
-    <h2>Reglas Generales</h2>
-    <ul>
-      <li>Conquista: 5 puntos</li>
-      <li>Clash: 4 puntos</li>
-      <li>Asalto: 4 puntos</li>
-      <li>Arena: 4 puntos</li>
-      <li>Justa 3v3: 3 puntos</li>
-      <li>2v2: 2 puntos</li>
-      <li>1v1: 1 punto</li>
-    </ul>
+    <h2 class="text-center">Puntos por Modo de Juego</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="info-box">Conquista: 5 puntos</div>
+        <div class="info-box">Clash: 4 puntos</div>
+        <div class="info-box">Asalto: 4 puntos</div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-box">Arena: 4 puntos</div>
+        <div class="info-box">Justa 3v3: 3 puntos</div>
+        <div class="info-box">2v2: 2 puntos</div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-box">1v1: 1 punto</div>
+        <div class="info-box">Meta: 700 puntos</div>
+      </div>
+    </div>
 
-    <h2 class="mt-4">Reglas de Farmeo</h2>
+    <h2 class="mt-4">Reglas del Farmeo</h2>
     <ul>
-      <li>Construcciones completas.</li>
-      <li>No desconexiones.</li>
-      <li>Respeto entre compañeros de equipo.</li>
-      <li>Cambiar de equipo tras cada victoria.</li>
-      <li>Límite de 30 puntos por persona o equipo según el modo.</li>
+      <li>Builds deben estar terminadas.</li>
+      <li>Todos los miembros del equipo deben terminar la partida (sin desconexiones).</li>
+      <li>No puedes farmear con la misma persona ni en el mismo equipo repetidamente.</li>
+      <li>Cambiar de equipo después de cada victoria.</li>
+      <li>Límite por modo:
+        <ul>
+          <li>1v1: 30 puntos por persona.</li>
+          <li>3v3, 4v4, 5v5: 30 puntos por equipo.</li>
+        </ul>
+      </li>
     </ul>
 
     <h2 class="mt-4">Cronograma</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h5>Inicio del Farmeo</h5>
-        <p>21 de noviembre de 2024 a las 6:00 PM (hora México).</p>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="p-3 bg-dark text-light rounded">
+          <h5>Inicio del Farmeo</h5>
+          <p>21 de noviembre de 2024</p>
+        </div>
       </div>
-      <div class="timeline-item">
-        <h5>Fin de la Fase 1</h5>
-        <p>30 de diciembre de 2024. Se pausa para regalos.</p>
+      <div class="col-md-4">
+        <div class="p-3 bg-dark text-light rounded">
+          <h5>Fin de la Fase 1</h5>
+          <p>30 de diciembre de 2024</p>
+        </div>
       </div>
-      <div class="timeline-item">
-        <h5>Inicio de la Fase 2 (Aleatorios)</h5>
-        <p>3 de enero de 2025.</p>
+      <div class="col-md-4">
+        <div class="p-3 bg-dark text-light rounded">
+          <h5>Inicio de la Fase 2</h5>
+          <p>3 de enero de 2025</p>
+        </div>
       </div>
     </div>
+
+    <h2 class="mt-4">Obligaciones</h2>
+    <ul>
+      <li>Transmitir las partidas en Discord (mínimo 1 persona por equipo).</li>
+      <li>Enviar capturas de pantalla de las partidas ganadas al canal exclusivo de Discord.</li>
+      <li>Respetar a todos los jugadores. El flameo o mala actitud invalidará la partida.</li>
+    </ul>
   </div>
 
   <footer>
